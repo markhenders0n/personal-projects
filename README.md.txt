@@ -1,0 +1,1 @@
+A repository of self-guided projects for learning and hobby purposes.
