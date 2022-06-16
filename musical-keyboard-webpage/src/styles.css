@@ -1,0 +1,52 @@
+body{
+    background-color: #606466;
+}
+
+h1{
+    background-color: #9da3a6;
+    margin: 50px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.keyboard-buttons{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    outline: none;
+    border: none;
+    margin: 2px;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 9px darkgray;
+    text-align: center;
+    padding: 50px 25px;
+    font-size: 24px;
+    cursor: none;
+}
+.button3, .button4{
+    align-self: flex-start;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: #161717;
+    box-shadow: 0 9px black;
+    text-align: center;
+    padding: 40px 13px;
+    font-size: 24px;
+    cursor: none; 
+}
+.button:hover{
+    background-color: lightgray;
+}
+.button3:hover, .button4:hover{
+    background-color: #3b3e40;
+}
+.button:active{
+    background-color: darkgray;
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+}
