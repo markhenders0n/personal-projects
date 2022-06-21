@@ -21,12 +21,14 @@ h1{
     color: black;
     background-color: white;
     box-shadow: 0 9px darkgray;
-    text-align: center;
-    padding: 50px 25px;
+    width: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 24px;
+    text-align: center;
     cursor: none;
 }
-.button3, .button4{
+.button2, .button4, .button7, .button9, .button11{
     align-self: flex-start;
     outline: none;
     border: none;
@@ -34,15 +36,17 @@ h1{
     color: white;
     background-color: #161717;
     box-shadow: 0 9px black;
-    text-align: center;
-    padding: 40px 13px;
+    width: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-size: 24px;
+    text-align: center;
     cursor: none; 
 }
 .button:hover{
     background-color: lightgray;
 }
-.button3:hover, .button4:hover{
+.button2:hover, .button4:hover, .button7:hover, .button9:hover, .button11:hover{
     background-color: #3b3e40;
 }
 .button:active{

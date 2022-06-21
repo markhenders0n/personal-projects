@@ -3,17 +3,24 @@
     <head>
         <title>Interactive Keyboard</title>
         <link rel="stylesheet" href="./styles.css"/>
+        <script src="play_note.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <body>
+    <body onkeydown="readKey(event);">
         <h1>Interactive Keyboard</h1>
         <div class="keyboard-buttons">
-            <button class="button button1">1</button>
-            <button class="button button2">2</button>
-            <button class="button button3">3</button>
-            <button class="button button4">4</button>
-            <button class="button button5">5</button>
-            <button class="button button6">6</button>
+            <button class="button button1" onmousedown="playNote(523.3, 'sine')" onmouseup="endNote()">C</button>
+            <button class="button button2" onmousedown="playNote(554.4, 'sine')" onmouseup="endNote()">C#</button>
+            <button class="button button3" onmousedown="playNote(587.3, 'sine')" onmouseup="endNote()">D</button>
+            <button class="button button4" onmousedown="playNote(622.3, 'sine')" onmouseup="endNote()">D#</button>
+            <button class="button button5" onmousedown="playNote(659.3, 'sine')" onmouseup="endNote()">E</button>
+            <button class="button button6" onmousedown="playNote(698.5, 'sine')" onmouseup="endNote()">F</button>
+            <button class="button button7" onmousedown="playNote(740.0, 'sine')" onmouseup="endNote()">F#</button>
+            <button class="button button8" onmousedown="playNote(784.0, 'sine')" onmouseup="endNote()">G</button>
+            <button class="button button9" onmousedown="playNote(830.6, 'sine')" onmouseup="endNote()">G#</button>
+            <button class="button button10" onmousedown="playNote(880.0, 'sine')" onmouseup="endNote()">A</button>
+            <button class="button button11" onmousedown="playNote(932.3, 'sine')" onmouseup="endNote()">A#</button>
+            <button class="button button12" onmousedown="playNote(987.8, 'sine')" onmouseup="endNote()">B</button>
         </div>
     </body>
 </html>
