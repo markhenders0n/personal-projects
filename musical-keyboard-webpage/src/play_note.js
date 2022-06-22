@@ -17,49 +17,74 @@ function endNote() {
     gain.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 1);
 }
 
-function readKey(event) {
+function pressButton(button, press) {
+    var buttontopress = document.getElementsByClassName(button)[0];
+    
+    if (press.type == "mousedown"){
+        buttontopress.style.backgroundColor = "darkgray";
+    buttontopress.style.boxShadow = "0 5px black";
+    buttontopress.style.transform = "translateY(4px)";
+    }
+    else {
+        if (button == "button2" || button == "button4" || button == "button7" || button == "button9" || button == "button11") {
+            buttontopress.style.backgroundColor = "#161717";
+            buttontopress.style.boxShadow = "0 9px black";
+        }
+        else {
+            buttontopress.style.backgroundColor = "white";
+            buttontopress.style.boxShadow = "0 9px darkgray";
+        }
+        buttontopress.style.transform = "translateY(0px)";
+    }
+    
+    
+    buttontopress.dispatchEvent(press);
+}
+
+function readKey(event, mousetype) {
+    if (event.repeat) return;
     var code = event.code;
-    let clickevent = new MouseEvent("mousedown", {
+    let clickevent = new MouseEvent(mousetype, {
         bubbles: true,
         cancelable: true,
         view: window
     });
     switch(code) {
         case "KeyQ":
-            document.getElementsByClassName("button1")[0].dispatchEvent(clickevent);
+            pressButton("button1", clickevent);
             break;
         case "KeyW":
-            document.getElementsByClassName("button2")[0].dispatchEvent(clickevent);
+            pressButton("button2", clickevent);
             break;
         case "KeyE":
-            document.getElementsByClassName("button3")[0].dispatchEvent(clickevent);
+            pressButton("button3", clickevent);
             break;
         case "KeyR":
-            document.getElementsByClassName("button4")[0].dispatchEvent(clickevent);
+            pressButton("button4", clickevent);
             break;
         case "KeyT":
-            document.getElementsByClassName("button5")[0].dispatchEvent(clickevent);
+            pressButton("button5", clickevent);
             break;
         case "KeyY":
-            document.getElementsByClassName("button6")[0].dispatchEvent(clickevent);
+            pressButton("button6", clickevent);
             break;
         case "KeyU":
-            document.getElementsByClassName("button7")[0].dispatchEvent(clickevent);
+            pressButton("button7", clickevent);
             break;
         case "KeyI":
-            document.getElementsByClassName("button8")[0].dispatchEvent(clickevent);
+            pressButton("button8", clickevent);
             break;
         case "KeyO":
-            document.getElementsByClassName("button9")[0].dispatchEvent(clickevent);
+            pressButton("button9", clickevent);
             break;
         case "KeyP":
-            document.getElementsByClassName("button10")[0].dispatchEvent(clickevent);
+            pressButton("button10", clickevent);
             break;
         case "BracketLeft":
-            document.getElementsByClassName("button11")[0].dispatchEvent(clickevent);
+            pressButton("button11", clickevent);
             break;
         case "BracketRight":
-            document.getElementsByClassName("button12")[0].dispatchEvent(clickevent);
+            pressButton("button12", clickevent);
             break;
     }
 }

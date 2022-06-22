@@ -6,7 +6,7 @@
         <script src="play_note.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <body onkeydown="readKey(event);">
+    <body onkeydown="readKey(event, 'mousedown');" onkeyup="readKey(event, 'mouseup');">
         <h1>Interactive Keyboard</h1>
         <div class="keyboard-buttons">
             <button class="button button1" onmousedown="playNote(523.3, 'sine')" onmouseup="endNote()">C</button>
