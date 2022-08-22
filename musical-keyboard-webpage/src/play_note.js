@@ -3,6 +3,9 @@ var oscillator = null;
 var gain = null;
 
 function playNote(frequency, type) {
+    if (document.getElementById("checkbox1").checked == true) {
+        type = "sawtooth"
+    }
     oscillator = context.createOscillator();
     gain = context.createGain();
     oscillator.type = type;
@@ -10,7 +13,7 @@ function playNote(frequency, type) {
     oscillator.frequency.value = frequency;
     gain.connect(context.destination);
     oscillator.start(0);
-    gain.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 2);
+    gain.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 5);
 }
 
 function endNote() {

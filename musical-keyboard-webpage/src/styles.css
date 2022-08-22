@@ -9,6 +9,43 @@ h1{
     border-radius: 6px;
 }
 
+.container {
+    position: relative;
+    padding-left: 70px;
+    margin-left: 50px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+label {
+    color: white;
+    font-size: 22px;
+}
+.container input{
+    position: absolute;
+    cursor: default;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 12.5px;
+    background-color: white;
+    box-shadow: 20px 0px #161717;
+}
+.container input:checked ~ .checkmark{
+    position: absolute;
+    left: 20px;
+    box-shadow: -20px 0px #161717;
+}
+
+
 .keyboard-buttons{
     display: flex;
     justify-content: center;

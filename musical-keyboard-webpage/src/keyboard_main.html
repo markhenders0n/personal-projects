@@ -8,6 +8,11 @@
     </head>
     <body onkeydown="readKey(event, 'mousedown');" onkeyup="readKey(event, 'mouseup');">
         <h1>Interactive Keyboard</h1>
+        <label class="container">
+            <input type="checkbox" id="checkbox1">
+            <span class="checkmark"></span>
+        </label>
+        <label for="container">Change Sound Type</label>
         <div class="keyboard-buttons">
             <button class="button button1" onmousedown="playNote(523.3, 'sine')" onmouseup="endNote()">C</button>
             <button class="button button2" onmousedown="playNote(554.4, 'sine')" onmouseup="endNote()">C#</button>
